@@ -43,6 +43,7 @@ public class AppointmentFrame extends JFrame {
 		dateLabel = new JLabel("", SwingConstants.CENTER);
 		curDate = Calendar.getInstance();
 		dateTitle();
+		dateLabel.setBorder(new TitledBorder(new EtchedBorder(), ""));
 		add(dateLabel, BorderLayout.NORTH);
 		
 		appointments = new ArrayList<Appointment>();
@@ -440,7 +441,7 @@ public class AppointmentFrame extends JFrame {
 		}
 		
 	}
-	
+	 
 	public void cancelButton(){		//When the CANCEL button is pressed, checks if the hour & minute are the same as any preexisting appointments on the current day, and if so, removes them from the list
 		
 		String errorMessage = "Please enter in an Integer value.";
